@@ -29,4 +29,10 @@
         android:label="@string/title_statistics"
         tools:layout="@layout/fragment_statistics" />
 
+    <fragment
+        android:id="@+id/navigation_myteam"
+        android:name="com.example.csci4176groupproject.ui.myteam.MyteamFragment"
+        android:label="@string/title_myteam"
+        tools:layout="@layout/fragment_myteam" />
+
 </navigation>
