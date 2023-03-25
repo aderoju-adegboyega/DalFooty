@@ -17,7 +17,7 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 cd existing_repo
 git remote add origin https://git.cs.dal.ca/raunak/csci-4176-group-project.git
 git branch -M main
-git push -uf origin main
+git push -uf origin main 
 ```
 
 ## Integrate with your tools
