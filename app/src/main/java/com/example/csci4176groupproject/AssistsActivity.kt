@@ -3,27 +3,28 @@ package com.example.csci4176groupproject
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.example.csci4176groupproject.databinding.ActivityAssistsBinding
 import com.example.csci4176groupproject.databinding.ActivityGoalsBinding
 
 
-class GoalsActivity : AppCompatActivity() {
-    lateinit var adapter: MyTeamAdapter
-    val dataList = mutableListOf<goalsItem>()
+class AssistsActivity : AppCompatActivity() {
+    lateinit var adapter: AssistsAdapter
+    val dataList = mutableListOf<AssistsItem>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var bind = ActivityGoalsBinding.inflate(layoutInflater, null, false)
+        var bind =ActivityAssistsBinding.inflate(layoutInflater, null, false)
         setContentView(bind.root)
-        setTitle("Goals")
+        setTitle("Assists")
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         fillData()
 
-        adapter = MyTeamAdapter(dataList)
+        adapter = AssistsAdapter(dataList)
         bind.lv.adapter = adapter
     }
 
     private fun fillData() {
         arrayOf(1, 2, 3, 4, 5).forEach { s ->
-            dataList.add(goalsItem(index = s))
+            dataList.add(AssistsItem(index = s))
         }
     }
 

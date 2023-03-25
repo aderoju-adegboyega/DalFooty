@@ -24,6 +24,6 @@
     <item
         android:id="@+id/navigation_myteam"
         android:icon="@drawable/baseline_favorite_24"
-        android:title="@string/title_myteam" />
+        android:title="@string/title_myTeam" />
 
 </menu>
