@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 
-class MyTeamAdapter : BaseAdapter {
-    var dataList: List<goalsItem>
+class AssistsAdapter : BaseAdapter {
+    var dataList: List<AssistsItem>
 
-    constructor(dataList: List<goalsItem>) : super() {
+    constructor(dataList: List<AssistsItem>) : super() {
         this.dataList = dataList
     }
 
@@ -23,7 +23,7 @@ class MyTeamAdapter : BaseAdapter {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         var item = this.dataList[position]
         var itemView = LayoutInflater.from(parent!!.context)
-            .inflate(R.layout.adapter_goals_layout, parent, false)
+            .inflate(R.layout.adapter_assists_layout, parent, false)
         var tvName = itemView.findViewById<TextView>(R.id.textView1)
         tvName.text = "${item.index}"
 

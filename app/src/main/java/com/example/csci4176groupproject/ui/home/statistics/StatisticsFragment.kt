@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.csci4176groupproject.AssistsActivity
 import com.example.csci4176groupproject.GoalsActivity
 import com.example.csci4176groupproject.databinding.FragmentStatisticsBinding
 import com.example.csci4176groupproject.leagueActivity
@@ -37,11 +38,14 @@ class StatisticsFragment : Fragment() {
         _binding?.textView6?.setOnClickListener {
             startActivity(Intent(it.context, GoalsActivity::class.java))
         }
+        _binding?.textView7?.setOnClickListener {
+            startActivity(Intent(it.context, AssistsActivity::class.java))
+        }
         _binding?.button?.setOnClickListener {
             AlertDialog.Builder(it.context)
                 .setTitle("Detail")
-                .setPositiveButton("confirm",null)
-                .setItems(arrayOf("Top1 goals","Top2 goals"), object : OnClickListener {
+                .setPositiveButton("Back",null)
+                .setItems(arrayOf("team 1 details","team 1 details"), object : OnClickListener {
                 override fun onClick(p0: DialogInterface?, p1: Int) {
                     Toast.makeText(it.context, "click", Toast.LENGTH_SHORT).show()
                 }
@@ -50,8 +54,8 @@ class StatisticsFragment : Fragment() {
         _binding?.button2?.setOnClickListener {
             AlertDialog.Builder(it.context)
                 .setTitle("Detail")
-                .setPositiveButton("confirm",null)
-                .setItems(arrayOf("Top1 goals","Top2 goals"), object : OnClickListener {
+                .setPositiveButton("Back",null)
+                .setItems(arrayOf("team 2 details","team 2 details"), object : OnClickListener {
                     override fun onClick(p0: DialogInterface?, p1: Int) {
                         Toast.makeText(it.context, "click", Toast.LENGTH_SHORT).show()
                     }
