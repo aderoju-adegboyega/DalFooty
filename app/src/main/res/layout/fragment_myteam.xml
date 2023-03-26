@@ -6,17 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".ui.myteam.MyteamFragment">
 
-    <TextView
-        android:id="@+id/text_myteam"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hasteam"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/text_myteam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="18dp"
+            android:textSize="26sp"
+            android:textColor="#333"
+            android:text="Please Select a team: "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_myteam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/teams"/>
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginEnd="54dp"
+            android:layout_height="wrap_content"
+            android:text="SELECT"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

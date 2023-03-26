@@ -99,4 +99,14 @@
     <string name="title_myteam">My Team</string>
 
 
+    <array name="teams">
+
+        <item>Aston Villa</item>
+        <item>AC Milan</item>
+        <item>Crystal Palace</item>
+        <item>Paris S.G.</item>
+        <item>Lyonnais</item>
+        <item>Manchester United</item>
+        <item>Tottenham Hotspur</item>
+    </array>
 </resources>
