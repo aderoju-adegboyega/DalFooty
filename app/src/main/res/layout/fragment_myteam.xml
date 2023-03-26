@@ -7,7 +7,8 @@
     tools:context=".ui.myteam.MyteamFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/hasteam"
+        android:visibility="gone"
+        android:id="@+id/no_team"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
@@ -46,5 +47,111 @@
             android:layout_height="wrap_content"
             android:text="SELECT"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/has_team"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/text_topNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="15sp"
+            android:paddingTop="10sp"
+            android:text="Latest Match Result"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.604" />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="80sp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="15sp"
+            android:background="@drawable/round_layout"
+            android:orientation="horizontal"
+            android:padding="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.551"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.119">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="320sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/_80b57fcd9996e24bc43c4e1" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="350sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5sp"
+                android:text="CHE" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="315sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="3"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="330sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="-"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="315sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="5"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="350sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5sp"
+                android:text="ARC" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="320sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/_80b57fcd9996e24bc43c4df" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
