@@ -12,6 +12,18 @@
         android:theme="@style/Theme.CSCI4176GroupProject"
         tools:targetApi="31">
         <activity
+            android:name=".AssistsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AssistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".leagueActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GoalsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name">
