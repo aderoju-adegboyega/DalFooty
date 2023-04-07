@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="15sp"
+    android:layout_marginTop="20sp"
+    android:layout_marginRight="15sp"
+    android:background="@drawable/round_layout"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:padding="12sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.268">
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="320sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/_80b57fcd9996e24bc43c4e5" />
+
+        <TextView
+            android:id="@+id/tv_home_team"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="LIV" />
+
+
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="330sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="-"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_away_team"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="MUN" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="320sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/_80b57fcd9996e24bc43c4e7" />
+    </LinearLayout>
+
+</LinearLayout>
