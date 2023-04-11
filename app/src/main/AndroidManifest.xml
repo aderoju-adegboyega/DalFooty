@@ -33,6 +33,12 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.results.ResultsActivity"
+            android:exported="true"
+            android:label="Results Page">
+        </activity>
+
     </application>
 
 </manifest>

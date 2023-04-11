@@ -1,5 +1,6 @@
 package com.example.csci4176groupproject.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.csci4176groupproject.databinding.FragmentHomeBinding
+import com.example.csci4176groupproject.ui.results.ResultsActivity
 
 class HomeFragment : Fragment() {
 
@@ -32,6 +34,13 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        val buttonClick = binding.button
+        buttonClick.setOnClickListener{
+            val intent = Intent(activity, ResultsActivity::class.java)
+            startActivity(intent)
+        }
+
         return root
     }
 
