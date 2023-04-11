@@ -1,3 +1,5 @@
+//class name: GoalsActivity
+//By Chengwen Yang
 package com.example.csci4176groupproject
 
 import android.os.Bundle
@@ -5,10 +7,11 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.csci4176groupproject.databinding.ActivityGoalsBinding
 
-
+// activity is to display a list of soccer players with the most goals in a league.
 class GoalsActivity : AppCompatActivity() {
     lateinit var adapter: MyTeamAdapter
     val dataList = mutableListOf<goalsItem>()
+    //overridden to set up the activity's layout, title, and back button on the action bar.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         var bind = ActivityGoalsBinding.inflate(layoutInflater, null, false)
@@ -20,7 +23,7 @@ class GoalsActivity : AppCompatActivity() {
         adapter = MyTeamAdapter(dataList)
         bind.lv.adapter = adapter
     }
-
+// populate the dataList with data and sets up an instance of the MyTeamAdapter class with the data
     private fun fillData() {
 
         dataList.add(goalsItem(1, "Granit Xhaka", "Arsenal", 35))
@@ -31,7 +34,7 @@ class GoalsActivity : AppCompatActivity() {
         dataList.add(goalsItem(6, "James Milner", "Liverpool", 102))
         dataList.add(goalsItem(7, "ChristianeNord", "Brentford", 79))
     }
-
+//overridden to handle clicks on the back button.
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
             finish()

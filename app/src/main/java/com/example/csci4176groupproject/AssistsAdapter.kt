@@ -1,3 +1,5 @@
+//class name: AssistsAdapter
+//By Chengwen Yang
 package com.example.csci4176groupproject
 
 import android.view.LayoutInflater
@@ -5,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
-
+//handle the data and display for a list of soccer players with the most assists in a league
 class AssistsAdapter : BaseAdapter {
     var dataList: List<AssistsItem>
 
@@ -19,7 +21,7 @@ class AssistsAdapter : BaseAdapter {
     override fun getItem(position: Int) = this.dataList[position]
 
     override fun getItemId(position: Int) = 0L
-
+//display of the data in each row of the list view
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         var item = this.dataList[position]
         var itemView = LayoutInflater.from(parent!!.context)

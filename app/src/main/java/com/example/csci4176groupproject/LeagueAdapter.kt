@@ -1,3 +1,5 @@
+//class name: LeagueAdaptor
+//By Chengwen Yang
 package com.example.csci4176groupproject
 
 import android.view.LayoutInflater
@@ -19,7 +21,7 @@ class LeagueAdapter : BaseAdapter {
     override fun getItem(position: Int) = this.dataList[position]
 
     override fun getItemId(position: Int) = 0L
-
+//provide a custom view for each item in the list view.
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         var league = this.dataList[position]
         var itemView = LayoutInflater.from(parent!!.context)

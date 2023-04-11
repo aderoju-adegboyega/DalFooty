@@ -1,3 +1,5 @@
+//class name: LeagueActivity
+//By Chengwen Yang
 package com.example.csci4176groupproject
 
 import android.os.Bundle
@@ -5,12 +7,13 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.csci4176groupproject.databinding.ActivityLeagueBinding
 import com.google.android.material.snackbar.Snackbar
-
+//activity displays a soccer league table.
 class leagueActivity : AppCompatActivity() {
 
     lateinit var adapter: LeagueAdapter
     lateinit var bind: ActivityLeagueBinding
     val dataList = mutableListOf<League>()
+    //inflates the layout for the activity and sets the title of the activity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bind = ActivityLeagueBinding.inflate(layoutInflater, null, false)
@@ -22,7 +25,7 @@ class leagueActivity : AppCompatActivity() {
         adapter = LeagueAdapter(dataList)
         bind.lv.adapter = adapter
     }
-
+//representing the teams in the league and their statistics such as matches played, won, lost, goals scored, and points earned
     private fun fillData() {
         dataList.add(League("Arsenal", 30, 23, 4, 3.72, 29.0, 43, 73))
         dataList.add(League("Manchester City", 29, 21, 4, 4.75, 27.0, 48, 67))
@@ -47,42 +50,11 @@ class leagueActivity : AppCompatActivity() {
 
 
     }
-
-    //    private fun fetchFixtures() {
-//        val apiService = RetrofitInstance.apiService
-//        apiService.getEvents("2", "fxOANtw4UPrhVmki", "rVTQtyInUZDFdqysXn3LRzPLoh2jDnB5", "").enqueue(object :
-//            Callback<ApiResponse> {
-//            override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
-//                if (response.isSuccessful) {
-//                    response.body()?.let { apiResponse ->
-//                        if (apiResponse.data.fixtures != null) {
-////                            fixturesViewModel.setFixtures()
-//                            dataList.clear()
-//                            apiResponse.data.fixtures.forEach {
-//                                dataList.add(League(name = it.home_name))
-//                            }
-//                            adapter.notifyDataSetChanged()
-//                        } else {
-//                            // Handle the case when the result is null
-//                            showErrorMessage("Error: No fixtures found in the API response")
-//                        }
-//                    }
-//                } else {
-//                    // Handle the error
-//                    showErrorMessage("Error: ${response.errorBody()?.string()}")
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
-//                // Handle the failure
-//                showErrorMessage("Error: ${t.localizedMessage}")
-//            }
-//        })
-//    }
+//displays a Snackbar with an error message.
     private fun showErrorMessage(message: String) {
         Snackbar.make(bind.root, message, Snackbar.LENGTH_LONG).show()
     }
-
+// handles the back button press event and finishes the activity.
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
             finish()

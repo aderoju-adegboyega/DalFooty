@@ -1,5 +1,7 @@
+//class name: League
+//By Chengwen Yang
 package com.example.csci4176groupproject
-
+//represents a soccer league and has several properties
 data class League(
     var name: String = "",
     var Pl: Int = 0,
