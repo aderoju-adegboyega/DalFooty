@@ -42,6 +42,17 @@ class HomeFragment : Fragment() {
             updateHomeNews(root)
         }, 2000)
 
+        val textView: TextView = binding.textHome
+        homeViewModel.text.observe(viewLifecycleOwner) {
+            textView.text = it
+        }
+
+        val buttonClick = binding.button
+        buttonClick.setOnClickListener{
+            val intent = Intent(activity, ResultsActivity::class.java)
+            startActivity(intent)
+        }
+
         return root
     }
 
