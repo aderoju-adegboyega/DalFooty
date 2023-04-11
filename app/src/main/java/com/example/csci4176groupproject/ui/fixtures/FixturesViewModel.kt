@@ -5,9 +5,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class FixturesViewModel : ViewModel() {
-
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is Fixtures Fragment"
+    private val _fixtures = MutableLiveData<List<Fixture>>().apply {
+        value = emptyList()
     }
-    val text: LiveData<String> = _text
+    val fixtures: LiveData<List<Fixture>> = _fixtures
+
+    fun setFixtures(fixtures: List<Fixture>) {
+        _fixtures.value = fixtures
+    }
 }

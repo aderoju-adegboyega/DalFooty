@@ -6,8 +6,12 @@ import androidx.lifecycle.ViewModel
 
 class NewsViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is News Fragment"
+    private val _news = MutableLiveData<List<Article>>().apply {
+        value = emptyList()
     }
-    val text: LiveData<String> = _text
+    val news: LiveData<List<Article>> = _news
+
+    fun setNews(news: List<Article>) {
+        _news.value = news
+    }
 }

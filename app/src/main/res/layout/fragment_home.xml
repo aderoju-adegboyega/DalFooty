@@ -55,8 +55,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="80sp"
+        android:layout_width="383dp"
+        android:layout_height="80dp"
         android:layout_marginLeft="15sp"
         android:layout_marginTop="20sp"
         android:layout_marginRight="15sp"
