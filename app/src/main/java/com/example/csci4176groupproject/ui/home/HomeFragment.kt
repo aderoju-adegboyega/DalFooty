@@ -7,20 +7,19 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.csci4176groupproject.R
-import com.example.csci4176groupproject.databinding.FragmentHomeBinding
 import com.example.csci4176groupproject.ui.API.NewsApiResponse
 import com.example.csci4176groupproject.ui.API.NewsApiRetrofitInstance
-import com.example.csci4176groupproject.ui.news.NewsViewModel
+import com.example.csci4176groupproject.ui.results.ResultsActivity
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import kotlinx.coroutines.*
 
 class HomeFragment : Fragment() {
 
@@ -36,22 +35,17 @@ class HomeFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 
+        val buttonClick: Button = root.findViewById(R.id.button)
+        buttonClick.setOnClickListener{
+            val intent = Intent(activity, ResultsActivity::class.java)
+            startActivity(intent)
+        }
+
         fetchHomeNewsData()
 
         Handler().postDelayed({
             updateHomeNews(root)
         }, 2000)
-
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-
-        val buttonClick = binding.button
-        buttonClick.setOnClickListener{
-            val intent = Intent(activity, ResultsActivity::class.java)
-            startActivity(intent)
-        }
 
         return root
     }
