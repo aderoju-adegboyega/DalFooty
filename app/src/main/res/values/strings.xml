@@ -100,6 +100,12 @@
     <string name="home_logo">home logo</string>
     <string name="dash">-</string>
     <string name="away_logo">away logo</string>
+    <string name="away_team_logo">away team logo</string>
+    <string name="home_team_logo">home team logo</string>
+    <string name="home_team">Home Team</string>
+    <string name="away_team">Away Team</string>
+    <string name="score">Score</string>
+    <string name="date">Date</string>
 
 
 </resources>
