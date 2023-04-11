@@ -51,6 +51,7 @@ class NewsFragment : Fragment() {
             "2023-04-10",
             "2023-04-10",
             "popularity",
+            "en",
             "e89d71a5de5046e1b28df4e39443363c"
         ).enqueue(object : Callback<NewsApiResponse> {
             override fun onResponse(call: Call<NewsApiResponse>, response: Response<NewsApiResponse>) {

@@ -302,7 +302,7 @@
     <Button
         android:id="@+id/button"
         android:layout_width="140dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:fontFamily="sans-serif"
         android:text="More Fixtures"
         android:textAllCaps="false"
@@ -312,7 +312,7 @@
         app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
+        app:layout_constraintVertical_bias="0.544" />
 
     <TextView
         android:id="@+id/text_topNews"
@@ -331,12 +331,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.604" />
+        app:layout_constraintVertical_bias="0.619" />
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/latestNews1"
         android:layout_width="match_parent"
-        android:layout_height="50sp"
+        android:layout_height="100sp"
         android:layout_marginLeft="15sp"
         android:layout_marginTop="20sp"
         android:layout_marginRight="15sp"
@@ -348,51 +348,23 @@
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.688">
+        app:layout_constraintVertical_bias="0.754">
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/latestNewsTitle1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:gravity="left|center_vertical"
-            android:text="Erling Haaland: Goal-Scoring Machine?"
-            android:textSize="14sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:layout_marginLeft="15sp"
-        android:layout_marginTop="20sp"
-        android:layout_marginRight="15sp"
-        android:background="@drawable/round_layout"
-        android:orientation="horizontal"
-        android:padding="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.788">
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="sans-serif"
-            android:gravity="left|center_vertical"
-            android:text="Darwin Núñez: Worst Signing in Football History?"
+            android:text=""
             android:textSize="14sp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/buttonMoreNews"
         android:layout_width="140dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:fontFamily="sans-serif"
         android:text="More News"
         android:textAllCaps="false"

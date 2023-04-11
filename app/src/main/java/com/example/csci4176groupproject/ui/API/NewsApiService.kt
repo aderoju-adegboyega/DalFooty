@@ -11,6 +11,7 @@ interface NewsApiService {
         @Query("from") from: String,
         @Query("to") to: String,
         @Query("sortBy") sortBy: String,
+        @Query("language") language: String,
         @Query("apiKey") apiKey: String
     ): Call<NewsApiResponse>
 }
