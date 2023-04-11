@@ -1,12 +1,13 @@
 //class name: LeagueAdaptor
 //By Chengwen Yang
-package com.example.csci4176groupproject
+package com.example.csci4176groupproject.ui.home.statistics
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import com.example.csci4176groupproject.R
 
 class LeagueAdapter : BaseAdapter {
     var dataList: List<League>
@@ -30,17 +31,17 @@ class LeagueAdapter : BaseAdapter {
         tvName.text = league.name
 
         var textView2 = itemView.findViewById<TextView>(R.id.textView2)
-        textView2.text = "${league.Pl}"
+        textView2.text = "${league.matches}"
         var textView3 = itemView.findViewById<TextView>(R.id.textView3)
-        textView3.text = "${league.W}"
+        textView3.text = "${league.won}"
         var textView4 = itemView.findViewById<TextView>(R.id.textView4)
-        textView4.text = "${league.D}"
+        textView4.text = "${league.drawn}"
         var textView5 = itemView.findViewById<TextView>(R.id.textView5)
-        textView5.text = "${league.L}"
+        textView5.text = "${league.lost}"
         var textView6 = itemView.findViewById<TextView>(R.id.textView6)
-        textView6.text = "${league.Pts}"
+        textView6.text = "${league.points}"
         var textView7 = itemView.findViewById<TextView>(R.id.textView7)
-        textView7.text = "${league.GD}"
+        textView7.text = "${league.goal_diff}"
 
 
         return itemView

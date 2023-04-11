@@ -13,10 +13,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.csci4176groupproject.AssistsActivity
-import com.example.csci4176groupproject.GoalsActivity
 import com.example.csci4176groupproject.databinding.FragmentStatisticsBinding
-import com.example.csci4176groupproject.leagueActivity
 
 //allows the code to access the views defined in the fragment's layout file.
 class StatisticsFragment : Fragment() {
