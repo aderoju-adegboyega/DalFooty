@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/navigation_fixtures"
         android:name="com.example.csci4176groupproject.ui.fixtures.FixturesFragment"
-        android:label="@string/title_fixtures"
+        android:label="@string/title_fixtures_upcoming"
         tools:layout="@layout/fragment_fixtures" />
 
     <fragment
