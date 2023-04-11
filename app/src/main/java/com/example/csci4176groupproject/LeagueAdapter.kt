@@ -28,17 +28,17 @@ class LeagueAdapter : BaseAdapter {
         tvName.text = league.name
 
         var textView2 = itemView.findViewById<TextView>(R.id.textView2)
-        textView2.text = ""
+        textView2.text = "${league.Pl}"
         var textView3 = itemView.findViewById<TextView>(R.id.textView3)
-        textView3.text = ""
+        textView3.text = "${league.W}"
         var textView4 = itemView.findViewById<TextView>(R.id.textView4)
-        textView4.text = ""
+        textView4.text = "${league.D}"
         var textView5 = itemView.findViewById<TextView>(R.id.textView5)
-        textView5.text = ""
+        textView5.text = "${league.L}"
         var textView6 = itemView.findViewById<TextView>(R.id.textView6)
-        textView6.text = ""
+        textView6.text = "${league.Pts}"
         var textView7 = itemView.findViewById<TextView>(R.id.textView7)
-        textView7.text = ""
+        textView7.text = "${league.GD}"
 
 
         return itemView

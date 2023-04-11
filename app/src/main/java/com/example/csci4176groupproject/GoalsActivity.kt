@@ -22,9 +22,14 @@ class GoalsActivity : AppCompatActivity() {
     }
 
     private fun fillData() {
-        arrayOf(1, 2, 3, 4, 5).forEach { s ->
-            dataList.add(goalsItem(index = s))
-        }
+
+        dataList.add(goalsItem(1, "Granit Xhaka", "Arsenal", 35))
+        dataList.add(goalsItem(2, "Scott Carson", "Manchester City", 52))
+        dataList.add(goalsItem(3, "Martin Dubravka", "Newcastle United", 83))
+        dataList.add(goalsItem(4, "Hugo Lloris", "Tottenham Hotspur", 66))
+        dataList.add(goalsItem(5, "Ashley Young", "Aston Villa", 76))
+        dataList.add(goalsItem(6, "James Milner", "Liverpool", 102))
+        dataList.add(goalsItem(7, "ChristianeNord", "Brentford", 79))
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

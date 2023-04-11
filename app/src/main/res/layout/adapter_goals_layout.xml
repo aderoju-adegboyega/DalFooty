@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="Player"
@@ -32,7 +32,7 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="Team"

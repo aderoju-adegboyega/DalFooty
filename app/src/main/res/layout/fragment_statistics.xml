@@ -44,8 +44,8 @@
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/head_c"
+            android:scaleType="fitXY"
+            android:src="@drawable/_80b57fcd9996e24bc43c4e7"
             tools:layout_editor_absoluteX="29dp"
             tools:layout_editor_absoluteY="102dp" />
 
@@ -79,8 +79,8 @@
             android:id="@+id/imageView2"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/head_m"
+            android:scaleType="fitXY"
+            android:src="@drawable/_84a9b3bb080d7616d298777"
             tools:layout_editor_absoluteX="29dp"
             tools:layout_editor_absoluteY="102dp" />
 

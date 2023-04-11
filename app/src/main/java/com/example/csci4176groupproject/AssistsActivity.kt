@@ -12,7 +12,7 @@ class AssistsActivity : AppCompatActivity() {
     val dataList = mutableListOf<AssistsItem>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var bind =ActivityAssistsBinding.inflate(layoutInflater, null, false)
+        var bind = ActivityAssistsBinding.inflate(layoutInflater, null, false)
         setContentView(bind.root)
         setTitle("Assists")
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -23,9 +23,13 @@ class AssistsActivity : AppCompatActivity() {
     }
 
     private fun fillData() {
-        arrayOf(1, 2, 3, 4, 5).forEach { s ->
-            dataList.add(AssistsItem(index = s))
-        }
+        dataList.add(AssistsItem(1, "Matthew Smith", "Arsenal", 14))
+        dataList.add(AssistsItem(2, "Stefan Ortega Moreno Germany", "Manchester City", 33))
+        dataList.add(AssistsItem(3, "Kieran John Trippier", "Newcastle United", 26))
+        dataList.add(AssistsItem(4, "Ivan Perišić", "Tottenham Hotspur", 76))
+        dataList.add(AssistsItem(5, "Jed John Steer", "Aston Villa", 89))
+        dataList.add(AssistsItem(6, "Jordan Henderson", "Liverpool", 123))
+        dataList.add(AssistsItem(7, "Christian Thers Norgaard", "Brentford", 58))
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
