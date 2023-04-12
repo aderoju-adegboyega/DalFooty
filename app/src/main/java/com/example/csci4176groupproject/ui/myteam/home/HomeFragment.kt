@@ -1,4 +1,4 @@
-package com.example.csci4176groupproject.ui.home
+package com.example.csci4176groupproject.ui.myteam.home
 
 import android.content.Intent
 import android.os.Bundle

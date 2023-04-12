@@ -3,6 +3,8 @@ package com.example.csci4176groupproject.ui.API
 import com.example.csci4176groupproject.ui.statistics.AssistsItem
 import com.example.csci4176groupproject.ui.statistics.League
 import com.example.csci4176groupproject.ui.fixtures.Fixture
+import com.example.csci4176groupproject.ui.myteam.TeamMatches
+import com.example.csci4176groupproject.ui.myteam.Teams
 import com.google.gson.annotations.SerializedName
 
 
@@ -35,4 +37,22 @@ data class ApiResponseGolas(
 data class GolasData(
     @SerializedName("goalscorers")
     val goalscorers: List<AssistsItem>
+)
+
+
+
+
+data class ApiResponseTeams(
+    @SerializedName("data")
+    val data: TeamsData
+)
+
+data class TeamsData(
+    @SerializedName("teams")
+    val teams: List<Teams>
+)
+
+data class ApiResponseTeamMatches(
+    @SerializedName("data")
+    val data: List<TeamMatches>
 )

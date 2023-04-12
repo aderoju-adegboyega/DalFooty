@@ -1,12 +1,14 @@
-package com.example.csci4176groupproject.ui.statistics
+package com.example.csci4176groupproject.ui.myteam.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class StatisticsViewModel : ViewModel() {
+class HomeViewModel : ViewModel() {
+
     private val _text = MutableLiveData<String>().apply {
-        value = "This is Statistics Fragment"
+        value = ""
     }
     val text: LiveData<String> = _text
+
 }

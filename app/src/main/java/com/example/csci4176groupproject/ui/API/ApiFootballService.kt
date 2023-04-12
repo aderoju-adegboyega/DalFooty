@@ -28,4 +28,17 @@ interface ApiFootballService {
     ): Call<ApiResponseGolas>
 
 
+    @GET("teams/list.json")
+    fun getTeams(
+        @Query("key") key: String,
+        @Query("secret") secret: String
+    ): Call<ApiResponseTeams>
+    @GET("teams/matches.json")
+    fun getTeamMatches(
+        @Query("team_id") team_id: String,
+        @Query("number") number: String,
+        @Query("key") key: String,
+        @Query("secret") secret: String
+    ): Call<ApiResponseTeamMatches>
+
 }
