@@ -1,4 +1,6 @@
-package com.example.csci4176groupproject.ui.home.statistics
+// Class name: StatisticsFragment
+// By Chengwen Yang
+package com.example.csci4176groupproject.ui.statistics
 
 import android.content.DialogInterface
 import android.content.DialogInterface.OnClickListener
@@ -11,17 +13,15 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.csci4176groupproject.AssistsActivity
-import com.example.csci4176groupproject.GoalsActivity
 import com.example.csci4176groupproject.databinding.FragmentStatisticsBinding
-import com.example.csci4176groupproject.leagueActivity
 
+//allows the code to access the views defined in the fragment's layout file.
 class StatisticsFragment : Fragment() {
 
     private var _binding: FragmentStatisticsBinding? = null
 
     private val binding get() = _binding!!
-
+//overridden to inflate the fragment's layout and initialize its views
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,7 +29,7 @@ class StatisticsFragment : Fragment() {
     ): View {
         val statisticsViewModel =
             ViewModelProvider(this).get(StatisticsViewModel::class.java)
-
+//pop up windows
         _binding = FragmentStatisticsBinding.inflate(inflater, container, false)
         val root: View = binding.root
         _binding?.textView5?.setOnClickListener {
@@ -45,7 +45,9 @@ class StatisticsFragment : Fragment() {
             AlertDialog.Builder(it.context)
                 .setTitle("Detail")
                 .setPositiveButton("Back",null)
-                .setItems(arrayOf("team 1 details","team 1 details"), object : OnClickListener {
+                .setItems(arrayOf("Manchester United Football Club",
+                    "A professional football club based in Old Trafford, Greater Manchester, England"
+                ,"Manchester United have won a record 20 League titles, 12 FA Cups, six League Cups, and a record 21 FA Community Shields"), object : OnClickListener {
                 override fun onClick(p0: DialogInterface?, p1: Int) {
                     Toast.makeText(it.context, "click", Toast.LENGTH_SHORT).show()
                 }
@@ -55,7 +57,7 @@ class StatisticsFragment : Fragment() {
             AlertDialog.Builder(it.context)
                 .setTitle("Detail")
                 .setPositiveButton("Back",null)
-                .setItems(arrayOf("team 2 details","team 2 details"), object : OnClickListener {
+                .setItems(arrayOf("Futbol Club Barcelona","A professional football club based in Barcelona, Catalonia, Spain", "Founded in 1899 by a group of Swiss, Catalan, German, and English footballers led by Joan Gamper, the club has become a symbol of Catalan culture and Catalanism"), object : OnClickListener {
                     override fun onClick(p0: DialogInterface?, p1: Int) {
                         Toast.makeText(it.context, "click", Toast.LENGTH_SHORT).show()
                     }
@@ -63,7 +65,7 @@ class StatisticsFragment : Fragment() {
         }
         return root
     }
-
+//overridden to clean up the _binding property and prevent memory leaks
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
