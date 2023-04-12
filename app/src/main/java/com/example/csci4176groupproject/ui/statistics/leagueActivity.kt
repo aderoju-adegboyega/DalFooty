@@ -2,6 +2,7 @@
 //By Chengwen Yang
 package com.example.csci4176groupproject.ui.statistics
 
+import LeagueAdapter
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity

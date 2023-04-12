@@ -40,8 +40,6 @@ data class GolasData(
 )
 
 
-
-
 data class ApiResponseTeams(
     @SerializedName("data")
     val data: TeamsData

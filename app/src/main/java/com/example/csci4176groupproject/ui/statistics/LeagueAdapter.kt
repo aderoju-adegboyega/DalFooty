@@ -1,6 +1,5 @@
 //class name: LeagueAdaptor
 //By Chengwen Yang
-package com.example.csci4176groupproject.ui.statistics
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.example.csci4176groupproject.R
+import com.example.csci4176groupproject.ui.statistics.League
 
 class LeagueAdapter : BaseAdapter {
     var dataList: List<League>

@@ -1,6 +1,5 @@
 //class name: AssistsAdapter
 //By Chengwen Yang
-package com.example.csci4176groupproject.ui.statistics
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.example.csci4176groupproject.R
+import com.example.csci4176groupproject.ui.statistics.AssistsItem
 
 //handle the data and display for a list of soccer players with the most assists in a league
 class AssistsAdapter : BaseAdapter {

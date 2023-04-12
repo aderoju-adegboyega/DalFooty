@@ -27,7 +27,6 @@ interface ApiFootballService {
         @Query("secret") secret: String
     ): Call<ApiResponseGolas>
 
-
     @GET("teams/list.json")
     fun getTeams(
         @Query("key") key: String,
@@ -40,5 +39,4 @@ interface ApiFootballService {
         @Query("key") key: String,
         @Query("secret") secret: String
     ): Call<ApiResponseTeamMatches>
-
 }
