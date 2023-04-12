@@ -36,7 +36,7 @@
         <activity
             android:name=".ui.results.ResultsActivity"
             android:exported="true"
-            android:label="Results Page">
+            android:label="Match Results">
         </activity>
 
     </application>
