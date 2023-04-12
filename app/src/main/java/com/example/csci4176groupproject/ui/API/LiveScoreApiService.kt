@@ -9,6 +9,8 @@ interface LiveScoreApiService {
     fun getResults(
         @Query("key") key: String,
         @Query("secret") secret: String,
-        @Query("competition_id") competitionId: String
+        @Query("competition_id") competitionId: String,
+        @Query("from") from: String,
+        @Query("to") to: String
     ): Call<ResultsApiResponse>
 }
