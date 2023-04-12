@@ -1,6 +1,6 @@
 //class name: League
 //By Chengwen Yang
-package com.example.csci4176groupproject.ui.home.statistics
+package com.example.csci4176groupproject.ui.statistics
 //represents a soccer league and has several properties
 data class League(
     var name: String = "",

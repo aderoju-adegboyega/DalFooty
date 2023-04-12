@@ -1,6 +1,6 @@
 //class name: AssistsItem
 //By Chengwen Yang
-package com.example.csci4176groupproject.ui.home.statistics
+package com.example.csci4176groupproject.ui.statistics
 
 import com.google.gson.annotations.SerializedName
 

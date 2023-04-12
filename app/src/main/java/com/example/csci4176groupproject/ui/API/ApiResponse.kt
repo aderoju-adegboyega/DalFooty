@@ -1,7 +1,7 @@
 package com.example.csci4176groupproject.ui.API
 
-import com.example.csci4176groupproject.ui.home.statistics.AssistsItem
-import com.example.csci4176groupproject.ui.home.statistics.League
+import com.example.csci4176groupproject.ui.statistics.AssistsItem
+import com.example.csci4176groupproject.ui.statistics.League
 import com.example.csci4176groupproject.ui.fixtures.Fixture
 import com.google.gson.annotations.SerializedName
 
