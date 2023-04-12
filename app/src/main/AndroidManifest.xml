@@ -12,7 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CSCI4176GroupProject"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.home.statistics.AssistsActivity"
+            android:exported="false" />
 
+        <activity
+            android:name=".ui.home.statistics.leagueActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.statistics.GoalsActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -29,6 +38,7 @@
             android:exported="true"
             android:label="Results Page">
         </activity>
+
     </application>
 
 </manifest>

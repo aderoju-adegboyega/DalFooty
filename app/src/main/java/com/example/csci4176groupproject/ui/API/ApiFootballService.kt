@@ -13,4 +13,19 @@ interface ApiFootballService {
         @Query("secret") secret: String,
         @Query("date") date: String
     ): Call<ApiResponse>
+
+    @GET("competitions/standings.json")
+    fun getLeagues(
+        @Query("competition_id") competition_id: String,
+        @Query("key") key: String,
+        @Query("secret") secret: String
+    ): Call<ApiResponseLeague>
+    @GET("competitions/goalscorers.json")
+    fun getGoals(
+        @Query("competition_id") competition_id: String,
+        @Query("key") key: String,
+        @Query("secret") secret: String
+    ): Call<ApiResponseGolas>
+
+
 }

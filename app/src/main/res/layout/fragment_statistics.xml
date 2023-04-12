@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Class name: fragment_statisticcs
+ By Chengwen Yang-->
+<!--this class shows the Stats page-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,6 +15,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
         android:text="STATS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,10 +26,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="2022/23 top stars"
-        app:layout_constraintHorizontal_bias="0.1"
+        android:text="2022/23 Top Stars"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:autoSizeTextType="none"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView"/>
+        app:layout_constraintTop_toBottomOf="@id/textView" />
 
     <LinearLayout
         android:id="@+id/ll"
@@ -44,8 +49,8 @@
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/head_c"
+            android:scaleType="fitXY"
+            android:src="@drawable/_80b57fcd9996e24bc43c4e7"
             tools:layout_editor_absoluteX="29dp"
             tools:layout_editor_absoluteY="102dp" />
 
@@ -54,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Team 1" />
+            android:text="Manchester United F.C." />
 
         <Button
             android:id="@+id/button"
@@ -79,8 +84,8 @@
             android:id="@+id/imageView2"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/head_m"
+            android:scaleType="fitXY"
+            android:src="@drawable/_84a9b3bb080d7616d298777"
             tools:layout_editor_absoluteX="29dp"
             tools:layout_editor_absoluteY="102dp" />
 
@@ -89,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Team 2" />
+            android:text="FC Barcelona" />
 
         <Button
             android:id="@+id/button2"
