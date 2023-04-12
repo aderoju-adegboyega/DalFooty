@@ -82,6 +82,7 @@
 
 
             <TextView
+                android:id="@+id/tv_vs_1"
                 android:layout_marginStart="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -90,6 +91,7 @@
                 android:text="VS      BAR" />
 
             <TextView
+                android:id="@+id/tv_date_1"
                 android:layout_marginTop="4dp"
                 android:layout_marginStart="10dp"
                 android:layout_width="match_parent"
@@ -114,6 +116,7 @@
 
 
             <TextView
+                android:id="@+id/tv_vs_2"
                 android:layout_marginStart="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -122,6 +125,7 @@
                 android:text="VS     Team MUN" />
 
             <TextView
+                android:id="@+id/tv_date_2"
                 android:layout_marginTop="4dp"
                 android:layout_marginStart="10dp"
                 android:layout_width="match_parent"
@@ -146,6 +150,7 @@
 
 
             <TextView
+                android:id="@+id/tv_vs_3"
                 android:layout_marginStart="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -154,6 +159,7 @@
                 android:text="VS     Team RMD" />
 
             <TextView
+                android:id="@+id/tv_date_3"
                 android:layout_marginTop="4dp"
                 android:layout_marginStart="10dp"
                 android:layout_width="match_parent"
