@@ -13,14 +13,14 @@
         android:theme="@style/Theme.CSCI4176GroupProject"
         tools:targetApi="31">
         <activity
-            android:name=".ui.home.statistics.AssistsActivity"
+            android:name=".ui.statistics.AssistsActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ui.home.statistics.leagueActivity"
+            android:name=".ui.statistics.leagueActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.home.statistics.GoalsActivity"
+            android:name=".ui.statistics.GoalsActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

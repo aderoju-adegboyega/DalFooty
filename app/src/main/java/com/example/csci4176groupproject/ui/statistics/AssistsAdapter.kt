@@ -1,6 +1,6 @@
-//class name: LeagueAdaptor
+//class name: AssistsAdapter
 //By Chengwen Yang
-package com.example.csci4176groupproject.ui.home.statistics
+package com.example.csci4176groupproject.ui.statistics
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +9,11 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import com.example.csci4176groupproject.R
 
-class LeagueAdapter : BaseAdapter {
-    var dataList: List<League>
+//handle the data and display for a list of soccer players with the most assists in a league
+class AssistsAdapter : BaseAdapter {
+    var dataList: List<AssistsItem>
 
-    constructor(dataList: List<League>) : super() {
+    constructor(dataList: List<AssistsItem>) : super() {
         this.dataList = dataList
     }
 
@@ -22,27 +23,20 @@ class LeagueAdapter : BaseAdapter {
     override fun getItem(position: Int) = this.dataList[position]
 
     override fun getItemId(position: Int) = 0L
-//provide a custom view for each item in the list view.
+//display of the data in each row of the list view
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var league = this.dataList[position]
+        var item = this.dataList[position]
         var itemView = LayoutInflater.from(parent!!.context)
-            .inflate(R.layout.adapter_league_layout, parent, false)
+            .inflate(R.layout.adapter_assists_layout, parent, false)
         var tvName = itemView.findViewById<TextView>(R.id.textView1)
-        tvName.text = league.name
+        tvName.text = "${position+1}"
 
         var textView2 = itemView.findViewById<TextView>(R.id.textView2)
-        textView2.text = "${league.matches}"
+        textView2.text = item.name
         var textView3 = itemView.findViewById<TextView>(R.id.textView3)
-        textView3.text = "${league.won}"
+        textView3.text = item.team?.name
         var textView4 = itemView.findViewById<TextView>(R.id.textView4)
-        textView4.text = "${league.drawn}"
-        var textView5 = itemView.findViewById<TextView>(R.id.textView5)
-        textView5.text = "${league.lost}"
-        var textView6 = itemView.findViewById<TextView>(R.id.textView6)
-        textView6.text = "${league.points}"
-        var textView7 = itemView.findViewById<TextView>(R.id.textView7)
-        textView7.text = "${league.goal_diff}"
-
+        textView4.text = "${item.assists}"
 
         return itemView
     }

@@ -1,46 +1,37 @@
-//class name: GoalsActivity
+//class name: AssistsActivity
 //By Chengwen Yang
-package com.example.csci4176groupproject.ui.home.statistics
+package com.example.csci4176groupproject.ui.statistics
 
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import com.example.csci4176groupproject.databinding.ActivityGoalsBinding
+import com.example.csci4176groupproject.databinding.ActivityAssistsBinding
 import com.example.csci4176groupproject.ui.API.ApiResponseGolas
-import com.example.csci4176groupproject.ui.API.ApiResponseLeague
 import com.example.csci4176groupproject.ui.API.RetrofitInstance
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-// activity is to display a list of soccer players with the most goals in a league.
-class GoalsActivity : AppCompatActivity() {
-    lateinit var adapter: MyTeamAdapter
+//display a list of soccer players with the most assists in a league
+class AssistsActivity : AppCompatActivity() {
+    lateinit var adapter: AssistsAdapter
     val dataList = mutableListOf<AssistsItem>()
-    lateinit   var bind :ActivityGoalsBinding
+    lateinit var bind:ActivityAssistsBinding
     //overridden to set up the activity's layout, title, and back button on the action bar.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var bind = ActivityGoalsBinding.inflate(layoutInflater, null, false)
+        var bind = ActivityAssistsBinding.inflate(layoutInflater, null, false)
         setContentView(bind.root)
-        setTitle("Goals")
+        setTitle("Assists")
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         fillData()
 
-        adapter = MyTeamAdapter(dataList)
+        adapter = AssistsAdapter(dataList)
         bind.lv.adapter = adapter
     }
-// populate the dataList with data and sets up an instance of the MyTeamAdapter class with the data
+//initializes the list with some api data.
     private fun fillData() {
-
-//        dataList.add(goalsItem(1, "Granit Xhaka", "Arsenal", 35))
-//        dataList.add(goalsItem(2, "Scott Carson", "Manchester City", 52))
-//        dataList.add(goalsItem(3, "Martin Dubravka", "Newcastle United", 83))
-//        dataList.add(goalsItem(4, "Hugo Lloris", "Tottenham Hotspur", 66))
-//        dataList.add(goalsItem(5, "Ashley Young", "Aston Villa", 76))
-//        dataList.add(goalsItem(6, "James Milner", "Liverpool", 102))
-//        dataList.add(goalsItem(7, "ChristianeNord", "Brentford", 79))
 
     val apiService = RetrofitInstance.apiService
     apiService.getGoals("1", "fxOANtw4UPrhVmki", "rVTQtyInUZDFdqysXn3LRzPLoh2jDnB5").enqueue(object :
