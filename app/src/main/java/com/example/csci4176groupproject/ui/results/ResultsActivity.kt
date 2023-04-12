@@ -32,7 +32,7 @@ class ResultsActivity : AppCompatActivity() {
         LiveScoreRetrofitInstance.apiService.getResults(
             "fxOANtw4UPrhVmki",
             "rVTQtyInUZDFdqysXn3LRzPLoh2jDnB5",
-            "2"
+            "2", "2023-03-29", "2023-04-11"
         ).enqueue(object : Callback<ResultsApiResponse> {
             @SuppressLint("NotifyDataSetChanged")
             override fun onResponse(call: Call<ResultsApiResponse>, response: Response<ResultsApiResponse>) {
