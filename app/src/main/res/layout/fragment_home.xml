@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="15sp"
         android:paddingTop="5sp"
-        android:text="Tuesday, 21 March 2023"
+        android:text="Wednesday, 12th, April 2023"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
