@@ -28,8 +28,8 @@ class MyteamFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-
-    private var team: Teams? = null
+var teamid = 0
+    private var team: Teams = Teams()
     private var spDataList: List<Teams> = mutableListOf()
     private var teamDataList: List<TeamMatches> = mutableListOf()
 
@@ -51,6 +51,12 @@ class MyteamFragment : Fragment() {
         setHasOptionsMenu(true);
         initTeamData()
         fillData()
+        var sp = requireContext().getSharedPreferences("team", Context.MODE_PRIVATE)
+          teamid= sp.getInt("team", 0)
+        if(teamid!=0){
+            team.id = teamid
+            fillTeamMatchesData()
+        }
         return root
     }
 
@@ -62,7 +68,7 @@ class MyteamFragment : Fragment() {
         binding.spinner.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 activity?.let {
-                    team = binding.spinner.adapter.getItem(p2) as Teams?
+                    team = binding.spinner.adapter.getItem(p2) as Teams
                     _binding.textMyteam.text = team?.name
                     fillTeamMatchesData()
                 }
@@ -77,7 +83,7 @@ class MyteamFragment : Fragment() {
         binding.btnSelect.setOnClickListener {
             activity?.let {
                 var sp = it.getSharedPreferences("team", Context.MODE_PRIVATE)
-                sp.edit().putString("team", team?.name).commit()
+                sp.edit().putInt("team", team?.id?:0).commit()
                 initTeamData()
             }
         }
@@ -85,12 +91,12 @@ class MyteamFragment : Fragment() {
 
     private fun initTeamData() {
         activity?.let {
-            var sp = it.getSharedPreferences("team", Context.MODE_PRIVATE)
-            var team = sp.getString("team", team?.name)
-            if (!TextUtils.isEmpty(team)) {
+
+            if (teamid==0) {
                 binding.noTeam.visibility = View.GONE
                 binding.hasTeam.visibility = View.VISIBLE
             } else {
+
                 binding.noTeam.visibility = View.VISIBLE
                 binding.hasTeam.visibility = View.GONE
             }
@@ -147,13 +153,25 @@ class MyteamFragment : Fragment() {
                     response.body()?.let { apiResponse ->
                         if (apiResponse.data != null) {
                             teamDataList = apiResponse.data
-                            _binding.tvDate1.text = teamDataList[0].date
-                            _binding.tvDate2.text = teamDataList[1].date
-                            _binding.tvDate3.text = teamDataList[2].date
+                            if(teamDataList.size>3){
+                                _binding.tvDate1.text = teamDataList[0].date
+                                _binding.tvDate2.text = teamDataList[1].date
+                                _binding.tvDate3.text = teamDataList[2].date
 
-                            _binding.tvVs1.text = "VS      ${teamDataList[0].away_name}"
-                            _binding.tvVs2.text = "VS      ${teamDataList[1].away_name}"
-                            _binding.tvVs3.text = "VS      ${teamDataList[2].away_name}"
+                                _binding.tvVs1.text = "VS      ${teamDataList[0].away_name}"
+                                _binding.tvVs2.text = "VS      ${teamDataList[1].away_name}"
+                                _binding.tvVs3.text = "VS      ${teamDataList[2].away_name}"
+
+
+                                var split = teamDataList[0].score.split("-")
+                                _binding.textView5.text = split[0]
+                                _binding.textView6.text = split[split.size-1]
+
+                                _binding.textView3.text=teamDataList[0].home_name
+                                _binding.textView4.text=teamDataList[0].away_name
+                            }
+
+
 
                         } else {
                             // Handle the case when the result is null

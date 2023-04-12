@@ -1,4 +1,4 @@
-package com.example.csci4176groupproject.ui.home
+package com.example.csci4176groupproject.ui.myteam.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,4 +1,4 @@
-package com.example.csci4176groupproject.ui.home.statistics
+package com.example.csci4176groupproject.ui.myteam.home.statistics
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

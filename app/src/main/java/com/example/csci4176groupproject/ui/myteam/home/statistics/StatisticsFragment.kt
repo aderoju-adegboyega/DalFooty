@@ -1,4 +1,4 @@
-package com.example.csci4176groupproject.ui.home.statistics
+package com.example.csci4176groupproject.ui.myteam.home.statistics
 
 import android.content.DialogInterface
 import android.content.DialogInterface.OnClickListener
