@@ -93,12 +93,13 @@ var teamid = 0
         activity?.let {
 
             if (teamid==0) {
-                binding.noTeam.visibility = View.GONE
-                binding.hasTeam.visibility = View.VISIBLE
-            } else {
-
                 binding.noTeam.visibility = View.VISIBLE
                 binding.hasTeam.visibility = View.GONE
+            } else {
+                binding.noTeam.visibility = View.GONE
+                binding.hasTeam.visibility = View.VISIBLE
+
+
             }
         }
 
